@@ -5,14 +5,13 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
-
-
+import plantita from '../img/plantita.png'
 const NavBar = () => {
     return ( 
         <>
             <Navbar bg="light" expand="lg">
                 <a className="navbar-brand" href="#"/>
-                    <img src="../img/plantita.png" alt="" width="30" height="24"/>
+                    <img src={plantita} alt="" width="30" height="24"/>
                 <Navbar.Brand href="#">Plantitas</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
