@@ -6,13 +6,16 @@ import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 import plantita from '../img/plantita.png'
+import {Link} from 'react-router-dom'
 const NavBar = () => {
     return ( 
         <>
             <Navbar bg="light" expand="lg">
-                <a className="navbar-brand" href="#"/>
-                    <img src={plantita} alt="" width="30" height="24"/>
-                <Navbar.Brand href="#">Plantitas</Navbar.Brand>
+                <Link to='/'>
+                    <a className="navbar-brand" href="#"/>
+                        <img src={plantita} alt="" width="30" height="24"/>
+                    <Navbar.Brand href="#">Plantitas</Navbar.Brand>
+                </Link>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
@@ -20,8 +23,14 @@ const NavBar = () => {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                         >
-                        <Nav.Link href="#action1">Home</Nav.Link>
-                        <Nav.Link href="#action2">Plantas Interiores</Nav.Link>
+                        <Nav.Link href="/">Home</Nav.Link>
+                        <NavDropdown title="Plantas" id="navbarScrollingDropdown">
+                            <Link to='/categoria/I'>
+                                <NavDropdown.Item href="#action3">Interiores</NavDropdown.Item>
+                            </Link>
+                            <Link to='/categoria/E'><NavDropdown.Item href="#action4">Exteriores</NavDropdown.Item></Link>
+                            <Link to='/categoria/H'><NavDropdown.Item href="#action4">Huerta</NavDropdown.Item></Link>
+                        </NavDropdown>
                         <NavDropdown title="Herramientas" id="navbarScrollingDropdown">
                             <NavDropdown.Item href="#action3">Para casa</NavDropdown.Item>
                             <NavDropdown.Item href="#action4">Para huerta</NavDropdown.Item>
