@@ -14,7 +14,7 @@ const NavBar = () => {
                 <Link to='/'>
                     <a className="navbar-brand" href="#"/>
                         <img src={plantita} alt="" width="30" height="24"/>
-                    <Navbar.Brand href="#">Plantitas</Navbar.Brand>
+                    <Link to="/"> <Navbar.Brand href="#">Plantitas</Navbar.Brand></Link>
                 </Link>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">

@@ -7,15 +7,15 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter> {/*envuelve a toda la app. Define el rango donde voy a usar el enrutador */}
       <div>
           <NavBar/>
-          <Switch>
+          <Switch> {/* componentes con rutas propias */}
             <Route exact path='/'>
               <ItemListContainer greeting={'Nicolas'}/>
             </Route>
             <Route exact path='/categoria/:idCategoria' component={ItemListContainer}/>
-            <Route component={ItemDetailContainer} exact path='/detalle/:id'/>
+            <Route component={ItemDetailContainer} exact path='/detalle/:idPlanta'/>
           </Switch>
       </div>
     </BrowserRouter>

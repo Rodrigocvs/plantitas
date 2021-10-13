@@ -1,8 +1,8 @@
 import Item from "./Item"
-
 const ItemList = (props) => {
     return ( 
         <>
+        
         <div className='container d-flex justify-content-center h-100 align-items-center'>
             <div className="row">
                     {props.plantas.map(planta => (
@@ -12,7 +12,7 @@ const ItemList = (props) => {
                     ))}
                 
             </div>
-        </div>
+        </div> 
         </>
      );
 }

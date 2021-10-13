@@ -1,7 +1,7 @@
 const ItemDetail = ({planta}) => {
     return ( 
         <>
-            <h2>{planta.name}</h2>
+            <h2>{planta}</h2>
         </>
      );
 }
