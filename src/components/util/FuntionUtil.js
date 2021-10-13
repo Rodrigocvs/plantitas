@@ -10,7 +10,6 @@ let plantas =[
 ]
 
 export const getFechOne = (id) => {
-    console.log(id)
     return new Promise ((res, rej)=>{
         let resp ='200'
         if(resp === '200') {

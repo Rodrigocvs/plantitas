@@ -11,7 +11,6 @@ const ItemDetailContainer = () => {
    
     useEffect(()=>{
         getFechOne(idPlanta)
-
         .then(planta => setPlanta(planta))
     }, [])
     
