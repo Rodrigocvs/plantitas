@@ -5,14 +5,19 @@ import {getFechOne} from './util/FuntionUtil';
 
 const ItemDetailContainer = () => {
 
-    const [planta, setPlanta] = useState() ;
+    const [planta, setPlanta] = useState({}) ;
 
     const { idPlanta } = useParams ();
    
-    useEffect(()=>{
+   useEffect(()=>{
         getFechOne(idPlanta)
         .then(planta => setPlanta(planta))
-    }, [])
+    }) 
+/*     getFechOne(idPlanta)
+    .then(planta => setPlanta(planta)) */
+    
+    console.log('acaaa')
+    console.log(planta)
     
 
     return ( 
