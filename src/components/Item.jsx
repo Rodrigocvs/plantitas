@@ -2,6 +2,7 @@ import Button from 'react-bootstrap/Button';
 import ItemCount from './ItemCount';
 import Card from 'react-bootstrap/Card';
 import { Link } from "react-router-dom";
+import './Style/Item.css'
 const Item = ({id, name, cost, stock, img}) => {
     const onAdd = (cant) =>{
         console.log(cant)
@@ -9,7 +10,7 @@ const Item = ({id, name, cost, stock, img}) => {
     return ( 
         <div className='card text-center'>  
             <Card key={id} style={{}}>
-                <Card.Img variant="top" src={img} alt='fotos' />
+                <Card.Img variant="top" src={img} alt='fotos' className='img' />
                     <Card.Body>
                         <Card.Title>{name}</Card.Title>
                         <Card.Text>

@@ -13,8 +13,6 @@ const ItemDetailContainer = () => {
         getFechOne(idPlanta)
         .then(planta => setPlanta(planta))
     }) 
-/*     getFechOne(idPlanta)
-    .then(planta => setPlanta(planta)) */
     
     console.log('acaaa')
     console.log(planta)
