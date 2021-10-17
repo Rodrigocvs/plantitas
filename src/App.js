@@ -3,6 +3,7 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer';
 import NavBar from './components/NavBar';
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import CardWidget from './components/CardWidget';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             </Route>
             <Route exact path='/categoria/:idCategoria' component={ItemListContainer}/>
             <Route component={ItemDetailContainer} exact path='/detalle/:idPlanta'/>
+            <Route component={CardWidget} exact path='/cart'/>
           </Switch>
       </div>
     </BrowserRouter>

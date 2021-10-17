@@ -4,9 +4,10 @@ import Card from 'react-bootstrap/Card';
 import { Link } from "react-router-dom";
 import './Style/Item.css'
 const Item = ({id, name, cost, stock, img}) => {
-    const onAdd = (cant) =>{
+    
+/*     const onAdd = (cant) =>{
         console.log(cant)
-    }
+    } */
     return ( 
         <div className='card text-center'>  
             <Card key={id} style={{}}>
@@ -17,7 +18,7 @@ const Item = ({id, name, cost, stock, img}) => {
                             Descripcion no disponible
                         </Card.Text>
                         <h3>${cost}</h3>
-                        <ItemCount stock= {stock} initial={1} onAdd={onAdd}/>
+                        {/* <ItemCount stock= {stock} initial={1} onAdd={onAdd}/> */}
                         <Link to={`/detalle/${id}`}>
                             <Button variant='secundary'>Ver mas</Button>
                         </Link>
