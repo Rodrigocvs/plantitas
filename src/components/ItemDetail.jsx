@@ -1,6 +1,6 @@
 import Image from 'react-bootstrap/Image';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
+
 import ItemCount from './ItemCount';
 import { useState } from 'react';
 import {useCartContext} from './../context/cartContext'
