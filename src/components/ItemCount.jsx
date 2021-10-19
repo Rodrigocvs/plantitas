@@ -27,7 +27,6 @@ const ItemCount = ({stock, initial, onAdd}) => {
             :
             <Link to='/cart'><Button variant="secundary" >Terminar compra</Button></Link> } 
             <Button variant="primary" onClick={Sumar}>+</Button>
-           
         </>
      );
 }

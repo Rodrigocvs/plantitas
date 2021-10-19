@@ -3,6 +3,8 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import ItemCount from './ItemCount';
 import { useState } from 'react';
+import {useCartContext} from './../context/cartContext'
+
 const ItemDetail = ({planta}) => {
 /*     console.log('aca')
     console.log(planta)  */
@@ -11,7 +13,9 @@ const ItemDetail = ({planta}) => {
     const onAdd = (cant) =>{
         console.log(cant)
         setCantidad(cant)
+        addToCart({item:planta, cantidad: cant})
     }
+    const {addToCart} = useCartContext()
     return ( 
         <>
             <h2>Nombre de la planta: {planta.name}</h2>
