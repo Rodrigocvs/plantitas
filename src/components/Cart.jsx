@@ -1,4 +1,6 @@
 
+import Button from '@restart/ui/esm/Button';
+import { Link } from 'react-router-dom';
 import { useCartContext } from '../context/cartContext';
 
 
@@ -7,7 +9,9 @@ const CardWidget = () => {
     console.log(cartList)
     return ( 
         <>
-            {cartList.map(item => <h2>La planta es {item.item.name} y la cantidad es {item.cantidad}</h2>)}
+            <h2>Tu pedido es: </h2>
+            {cartList.map(item => <h4>{item.cantidad} {item.item.name}. Precio Unitario: ${item.item.cost}</h4>)}
+            <Link to={'/'}><Button variant='primary' >Seguir comprando</Button> </Link>
         </>
      );
 }
